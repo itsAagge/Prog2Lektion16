@@ -1,5 +1,7 @@
 package opgave02.models;
 
+import java.util.Iterator;
+
 public interface SortedListEaaa<E extends Comparable<E>> extends Iterable<E> {
     /*
      * Adds an element to the list, sorted by the natural order.
@@ -56,4 +58,10 @@ public interface SortedListEaaa<E extends Comparable<E>> extends Iterable<E> {
      * @throws java.util.NoSuchElementException if this list is empty
      */
     void removeLast();
+
+    /**
+     * Returns an iterator over the elements in this list in descending order.
+     * @return an iterator over the elements in this list in descending order
+     */
+    Iterator<E> descendingIterator();
 }
