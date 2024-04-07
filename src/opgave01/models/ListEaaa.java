@@ -1,7 +1,5 @@
 package opgave01.models;
 
-import java.util.function.Consumer;
-
 public interface ListEaaa<E> extends Iterable<E> {
     /*
      * Adds an element to the end of the list

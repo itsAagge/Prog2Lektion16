@@ -1,7 +1,5 @@
 package opgave02.models;
 
-import opgave01.models.ListEaaa;
-
 public interface SortedListEaaa<E extends Comparable<E>> extends Iterable<E> {
     /*
      * Adds an element to the list, sorted by the natural order.
