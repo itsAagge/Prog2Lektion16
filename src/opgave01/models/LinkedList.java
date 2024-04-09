@@ -133,13 +133,17 @@ public class LinkedList<E> implements ListEaaa<E> {
     //With recursion
     @Override
     public E get(int index) {
-        Node<E> current = head;
-        return getHelper(current,0, index).getElement();
+        if (index >= this.size() || index < 0) {
+            throw new IllegalArgumentException("Index must be max " + (this.size() - 1) + " and at least 0");
+        } else {
+            Node<E> current = head;
+            return getHelper(current, 0, index);
+        }
     }
 
-    public Node<E> getHelper(Node<E> current, int index, int finalIndex) {
+    public E getHelper(Node<E> current, int index, int finalIndex) {
         if (index == finalIndex) {
-            return current;
+            return current.getElement();
         } else {
             return getHelper(current.getNext(), index + 1, finalIndex);
         }
